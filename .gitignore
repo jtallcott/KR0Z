@@ -2,10 +2,13 @@
 *.slo
 *.lo
 *.o
+*.sdf
 
 # Compiled Dynamic libraries
 *.so
+*.suo
 *.dylib
+*.ipch
 
 # Compiled Static libraries
 *.lai
