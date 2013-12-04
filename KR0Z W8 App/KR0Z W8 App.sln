@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KR0Z W8 App", "KR0Z W8 App\KR0Z W8 App.vcxproj", "{A9294BF1-D616-4DE7-A86E-323DAB915605}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KR0Z_GameProject", "KR0Z_GameProject\KR0Z_GameProject.vcxproj", "{534D5466-1F6B-4727-9E59-005A86506E79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -31,6 +33,14 @@ Global
 		{A9294BF1-D616-4DE7-A86E-323DAB915605}.Release|x64.ActiveCfg = Release|x64
 		{A9294BF1-D616-4DE7-A86E-323DAB915605}.Release|x64.Build.0 = Release|x64
 		{A9294BF1-D616-4DE7-A86E-323DAB915605}.Release|x64.Deploy.0 = Release|x64
+		{534D5466-1F6B-4727-9E59-005A86506E79}.Debug|ARM.ActiveCfg = Debug|Win32
+		{534D5466-1F6B-4727-9E59-005A86506E79}.Debug|Win32.ActiveCfg = Debug|Win32
+		{534D5466-1F6B-4727-9E59-005A86506E79}.Debug|Win32.Build.0 = Debug|Win32
+		{534D5466-1F6B-4727-9E59-005A86506E79}.Debug|x64.ActiveCfg = Debug|Win32
+		{534D5466-1F6B-4727-9E59-005A86506E79}.Release|ARM.ActiveCfg = Release|Win32
+		{534D5466-1F6B-4727-9E59-005A86506E79}.Release|Win32.ActiveCfg = Release|Win32
+		{534D5466-1F6B-4727-9E59-005A86506E79}.Release|Win32.Build.0 = Release|Win32
+		{534D5466-1F6B-4727-9E59-005A86506E79}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -48,6 +48,7 @@
             <Button Content="Character Select" FontSize="32" Width="300" Click="CS_Click"/>
             </StackPanel>
         </StackPanel>
+      
 
         <!-- End Menu Buttons -->
         <VisualStateManager.VisualStateGroups>

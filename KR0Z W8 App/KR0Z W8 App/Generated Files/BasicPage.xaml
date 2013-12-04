@@ -48,6 +48,7 @@
             <Button x:ConnectionId='1' Content="Character Select" FontSize="32" Width="300"                 />
             </StackPanel>
         </StackPanel>
+      
 
         <!-- End Menu Buttons -->
         <VisualStateManager.VisualStateGroups>
