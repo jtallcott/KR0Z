@@ -132,12 +132,18 @@
     <ClInclude Include="BasicPage.xaml.h">
       <DependentUpon>BasicPage.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="CharacterSelectPage.xaml.h">
+      <DependentUpon>CharacterSelectPage.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="Common\BindableBase.h" />
     <ClInclude Include="Common\BooleanNegationConverter.h" />
     <ClInclude Include="Common\BooleanToVisibilityConverter.h" />
     <ClInclude Include="Common\LayoutAwarePage.h" />
     <ClInclude Include="Common\RichTextColumns.h" />
     <ClInclude Include="Common\SuspensionManager.h" />
+    <ClInclude Include="GamePage.xaml.h">
+      <DependentUpon>GamePage.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -150,7 +156,13 @@
     <Page Include="BasicPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="CharacterSelectPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Common\StandardStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GamePage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
@@ -173,12 +185,18 @@
     <ClCompile Include="BasicPage.xaml.cpp">
       <DependentUpon>BasicPage.xaml</DependentUpon>
     </ClCompile>
+    <ClCompile Include="CharacterSelectPage.xaml.cpp">
+      <DependentUpon>CharacterSelectPage.xaml</DependentUpon>
+    </ClCompile>
     <ClCompile Include="Common\BindableBase.cpp" />
     <ClCompile Include="Common\BooleanNegationConverter.cpp" />
     <ClCompile Include="Common\BooleanToVisibilityConverter.cpp" />
     <ClCompile Include="Common\LayoutAwarePage.cpp" />
     <ClCompile Include="Common\RichTextColumns.cpp" />
     <ClCompile Include="Common\SuspensionManager.cpp" />
+    <ClCompile Include="GamePage.xaml.cpp">
+      <DependentUpon>GamePage.xaml</DependentUpon>
+    </ClCompile>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

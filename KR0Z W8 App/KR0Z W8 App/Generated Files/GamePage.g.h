@@ -29,7 +29,7 @@ namespace Windows {
 
 namespace KR0Z_W8_App
 {
-    partial ref class BasicPage : public ::KR0Z_W8_App::Common::LayoutAwarePage, 
+    partial ref class GamePage : public ::KR0Z_W8_App::Common::LayoutAwarePage, 
         public ::Windows::UI::Xaml::Markup::IComponentConnector
     {
     public:

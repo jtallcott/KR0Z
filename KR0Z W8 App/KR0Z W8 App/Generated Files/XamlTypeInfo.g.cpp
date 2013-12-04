@@ -10,9 +10,13 @@
 #include "XamlTypeInfo.g.h"
 
 #include "BasicPage.xaml.h"
+#include "CharacterSelectPage.xaml.h"
+#include "GamePage.xaml.h"
 #include "App.xaml.h"
 
 #include "BasicPage.g.hpp"
+#include "CharacterSelectPage.g.hpp"
+#include "GamePage.g.hpp"
 #include "App.g.hpp"
 
 ::Platform::Collections::Vector<::Windows::UI::Xaml::Markup::IXamlMetadataProvider^>^ ::XamlTypeInfo::InfoProvider::XamlTypeInfoProvider::OtherProviders::get()
@@ -103,6 +107,30 @@
             []() -> Platform::Object^ 
             {
                 return ref new ::KR0Z_W8_App::BasicPage(); 
+            };
+        return userType;
+    }
+
+    if (typeName == L"KR0Z_W8_App.CharacterSelectPage")
+    {
+        ::XamlTypeInfo::InfoProvider::XamlUserType^ userType = ref new ::XamlTypeInfo::InfoProvider::XamlUserType(this, typeName, GetXamlTypeByName(L"KR0Z_W8_App.Common.LayoutAwarePage"));
+        userType->KindOfType = ::Windows::UI::Xaml::Interop::TypeKind::Custom;
+        userType->Activator =
+            []() -> Platform::Object^ 
+            {
+                return ref new ::KR0Z_W8_App::CharacterSelectPage(); 
+            };
+        return userType;
+    }
+
+    if (typeName == L"KR0Z_W8_App.GamePage")
+    {
+        ::XamlTypeInfo::InfoProvider::XamlUserType^ userType = ref new ::XamlTypeInfo::InfoProvider::XamlUserType(this, typeName, GetXamlTypeByName(L"KR0Z_W8_App.Common.LayoutAwarePage"));
+        userType->KindOfType = ::Windows::UI::Xaml::Interop::TypeKind::Custom;
+        userType->Activator =
+            []() -> Platform::Object^ 
+            {
+                return ref new ::KR0Z_W8_App::GamePage(); 
             };
         return userType;
     }
