@@ -51,3 +51,11 @@ void GamePage::SaveState(IMap<String^, Object^>^ pageState)
 {
 	(void) pageState;	// Unused parameter
 }
+
+void KR0Z_W8_App::GamePage::KeyDownHandle(Platform::Object^ sender, Windows::UI::Xaml::Input::KeyRoutedEventArgs^ e)
+{
+	if (e->Key == Windows::System::VirtualKey::Enter)
+    {
+        GamePage::textBlock1->Text = "You Entered: " + GamePage::textBox1->Text;
+    }
+}

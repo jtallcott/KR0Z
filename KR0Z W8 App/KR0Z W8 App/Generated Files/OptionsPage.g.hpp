@@ -7,31 +7,27 @@
 //     the code is regenerated.
 //------------------------------------------------------------------------------
 #include "pch.h"
-#include "CharacterSelectPage.xaml.h"
+#include "OptionsPage.xaml.h"
 
 
 
 
-void ::KR0Z_W8_App::CharacterSelectPage::InitializeComponent()
+void ::KR0Z_W8_App::OptionsPage::InitializeComponent()
 {
     if (_contentLoaded)
         return;
 
     _contentLoaded = true;
 
-    // Call LoadComponent on ms-appx:///CharacterSelectPage.xaml
-    ::Windows::UI::Xaml::Application::LoadComponent(this, ref new ::Windows::Foundation::Uri(L"ms-appx:///CharacterSelectPage.xaml"), ::Windows::UI::Xaml::Controls::Primitives::ComponentResourceLocation::Application);
+    // Call LoadComponent on ms-appx:///OptionsPage.xaml
+    ::Windows::UI::Xaml::Application::LoadComponent(this, ref new ::Windows::Foundation::Uri(L"ms-appx:///OptionsPage.xaml"), ::Windows::UI::Xaml::Controls::Primitives::ComponentResourceLocation::Application);
 
-    // Get the CollectionViewSource named 'itemsViewSource'
-    itemsViewSource = safe_cast<::Windows::UI::Xaml::Data::CollectionViewSource^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"itemsViewSource"));
-    // Get the GridView named 'itemGridView'
-    itemGridView = safe_cast<::Windows::UI::Xaml::Controls::GridView^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"itemGridView"));
-    // Get the ListView named 'itemListView'
-    itemListView = safe_cast<::Windows::UI::Xaml::Controls::ListView^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"itemListView"));
     // Get the Button named 'backButton'
     backButton = safe_cast<::Windows::UI::Xaml::Controls::Button^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"backButton"));
     // Get the TextBlock named 'pageTitle'
     pageTitle = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"pageTitle"));
+    // Get the TextBlock named 'tagLine'
+    tagLine = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"tagLine"));
     // Get the VisualStateGroup named 'ApplicationViewStates'
     ApplicationViewStates = safe_cast<::Windows::UI::Xaml::VisualStateGroup^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"ApplicationViewStates"));
     // Get the VisualState named 'FullScreenLandscape'
@@ -44,13 +40,25 @@ void ::KR0Z_W8_App::CharacterSelectPage::InitializeComponent()
     Snapped = safe_cast<::Windows::UI::Xaml::VisualState^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"Snapped"));
 }
 
-void ::KR0Z_W8_App::CharacterSelectPage::Connect(int connectionId, Platform::Object^ target)
+void ::KR0Z_W8_App::OptionsPage::Connect(int connectionId, Platform::Object^ target)
 {
     switch (connectionId)
     {
     case 1:
         (safe_cast<::Windows::UI::Xaml::Controls::Primitives::ButtonBase^>(target))->Click +=
-            ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::KR0Z_W8_App::CharacterSelectPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&CharacterSelectPage::GoBack);
+            ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::KR0Z_W8_App::OptionsPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&OptionsPage::GoBack);
+        break;
+    case 2:
+        (safe_cast<::Windows::UI::Xaml::Controls::Primitives::ButtonBase^>(target))->Click +=
+            ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::KR0Z_W8_App::OptionsPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&OptionsPage::Save_Prompt_Click);
+        break;
+    case 3:
+        (safe_cast<::Windows::UI::Xaml::Controls::Primitives::ButtonBase^>(target))->Click +=
+            ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::KR0Z_W8_App::OptionsPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&OptionsPage::Music_Click);
+        break;
+    case 4:
+        (safe_cast<::Windows::UI::Xaml::Controls::Primitives::ButtonBase^>(target))->Click +=
+            ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::KR0Z_W8_App::OptionsPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&OptionsPage::SFX_Click);
         break;
     }
     (void)connectionId; // Unused parameter

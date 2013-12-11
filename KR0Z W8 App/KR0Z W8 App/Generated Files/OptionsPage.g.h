@@ -11,18 +11,7 @@
 namespace Windows {
     namespace UI {
         namespace Xaml {
-            namespace Data {
-                ref class CollectionViewSource;
-            }
-        }
-    }
-}
-namespace Windows {
-    namespace UI {
-        namespace Xaml {
             namespace Controls {
-                ref class GridView;
-                ref class ListView;
                 ref class Button;
                 ref class TextBlock;
             }
@@ -40,7 +29,7 @@ namespace Windows {
 
 namespace KR0Z_W8_App
 {
-    partial ref class CharacterSelectPage : public ::KR0Z_W8_App::Common::LayoutAwarePage, 
+    partial ref class OptionsPage : public ::KR0Z_W8_App::Common::LayoutAwarePage, 
         public ::Windows::UI::Xaml::Markup::IComponentConnector
     {
     public:
@@ -50,11 +39,9 @@ namespace KR0Z_W8_App
     private:
         bool _contentLoaded;
     
-        private: ::Windows::UI::Xaml::Data::CollectionViewSource^ itemsViewSource;
-        private: ::Windows::UI::Xaml::Controls::GridView^ itemGridView;
-        private: ::Windows::UI::Xaml::Controls::ListView^ itemListView;
         private: ::Windows::UI::Xaml::Controls::Button^ backButton;
         private: ::Windows::UI::Xaml::Controls::TextBlock^ pageTitle;
+        private: ::Windows::UI::Xaml::Controls::TextBlock^ tagLine;
         private: ::Windows::UI::Xaml::VisualStateGroup^ ApplicationViewStates;
         private: ::Windows::UI::Xaml::VisualState^ FullScreenLandscape;
         private: ::Windows::UI::Xaml::VisualState^ Filled;

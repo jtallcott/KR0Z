@@ -144,6 +144,9 @@
     <ClInclude Include="GamePage.xaml.h">
       <DependentUpon>GamePage.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="OptionsPage.xaml.h">
+      <DependentUpon>OptionsPage.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -163,6 +166,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="GamePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OptionsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
@@ -197,6 +203,9 @@
     <ClCompile Include="GamePage.xaml.cpp">
       <DependentUpon>GamePage.xaml</DependentUpon>
     </ClCompile>
+    <ClCompile Include="OptionsPage.xaml.cpp">
+      <DependentUpon>OptionsPage.xaml</DependentUpon>
+    </ClCompile>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -207,6 +216,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Assets\CharacterData.txt" />
     <Text Include="Common\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

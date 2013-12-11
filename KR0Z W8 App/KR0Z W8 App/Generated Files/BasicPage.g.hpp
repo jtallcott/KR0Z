@@ -22,10 +22,10 @@ void ::KR0Z_W8_App::BasicPage::InitializeComponent()
     // Call LoadComponent on ms-appx:///BasicPage.xaml
     ::Windows::UI::Xaml::Application::LoadComponent(this, ref new ::Windows::Foundation::Uri(L"ms-appx:///BasicPage.xaml"), ::Windows::UI::Xaml::Controls::Primitives::ComponentResourceLocation::Application);
 
-    // Get the Button named 'backButton'
-    backButton = safe_cast<::Windows::UI::Xaml::Controls::Button^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"backButton"));
     // Get the TextBlock named 'pageTitle'
     pageTitle = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"pageTitle"));
+    // Get the TextBlock named 'tagLine'
+    tagLine = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"tagLine"));
     // Get the VisualStateGroup named 'ApplicationViewStates'
     ApplicationViewStates = safe_cast<::Windows::UI::Xaml::VisualStateGroup^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"ApplicationViewStates"));
     // Get the VisualState named 'FullScreenLandscape'
@@ -44,15 +44,15 @@ void ::KR0Z_W8_App::BasicPage::Connect(int connectionId, Platform::Object^ targe
     {
     case 1:
         (safe_cast<::Windows::UI::Xaml::Controls::Primitives::ButtonBase^>(target))->Click +=
-            ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::KR0Z_W8_App::BasicPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&BasicPage::CS_Click);
+            ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::KR0Z_W8_App::BasicPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&BasicPage::Opt_Click);
         break;
     case 2:
         (safe_cast<::Windows::UI::Xaml::Controls::Primitives::ButtonBase^>(target))->Click +=
-            ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::KR0Z_W8_App::BasicPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&BasicPage::Button_Click);
+            ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::KR0Z_W8_App::BasicPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&BasicPage::CS_Click);
         break;
     case 3:
         (safe_cast<::Windows::UI::Xaml::Controls::Primitives::ButtonBase^>(target))->Click +=
-            ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::KR0Z_W8_App::BasicPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&BasicPage::GoBack);
+            ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::KR0Z_W8_App::BasicPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&BasicPage::Button_Click);
         break;
     }
     (void)connectionId; // Unused parameter

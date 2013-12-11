@@ -13,7 +13,8 @@
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">KR0Z - A Text Adventure</x:String>
+        <x:String x:Key="AppName">KR0Z</x:String>
+        <x:String x:Key="TagLine">A Text Based Adventure</x:String>
     </Page.Resources>
 
     <!--
@@ -22,35 +23,41 @@
         * Row 1 contains the rest of the page layout
     -->
     <Grid Style="{StaticResource LayoutRootStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="140"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
 
-        <!-- Back button and page title -->
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='3' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
-        </Grid>
+        <!-- Back button and page title/tagline -->
+        <TextBlock x:Name="pageTitle" TextAlignment="Center" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" FontSize="180" Text="{StaticResource AppName}"/>
+        <TextBlock x:Name="tagLine" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" FontSize="24" Text="{StaticResource TagLine}"/>
         
         <!-- Menu Buttons-->
-        <StackPanel Grid.Row="1" Margin="120,50,0,0">
-            <StackPanel Orientation= "Horizontal" Margin=" 0, 20, 0, 20">
-                <Button x:ConnectionId='2' Content="Start Game" FontSize="32" Width="300"                     />
+        <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation= "Horizontal" >
+                <Button x:ConnectionId='3' Content="Start Game" FontSize="32" Width="300"                     />
             </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Row="1" Margin="120, 200, 0, 0">
-            <StackPanel Orientation="Horizontal" Margin=" 0, 20, 0, 20">
-            <Button x:ConnectionId='1' Content="Character Select" FontSize="32" Width="300"                 />
+        <StackPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" >
+            <Button x:ConnectionId='2' Content="Character Select" FontSize="32" Width="300"                 />
             </StackPanel>
         </StackPanel>
-      
+        <StackPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Button x:ConnectionId='1' Content="Options" FontSize="32" Width="300"                  />
+            </StackPanel>
+        </StackPanel>
 
-        <!-- End Menu Buttons -->
         <VisualStateManager.VisualStateGroups>
 
             <!-- Visual states reflect the application's view state -->

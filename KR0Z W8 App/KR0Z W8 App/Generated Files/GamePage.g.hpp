@@ -24,8 +24,14 @@ void ::KR0Z_W8_App::GamePage::InitializeComponent()
 
     // Get the Button named 'backButton'
     backButton = safe_cast<::Windows::UI::Xaml::Controls::Button^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"backButton"));
+    // Get the TextBlock named 'textBlock1'
+    textBlock1 = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"textBlock1"));
+    // Get the TextBox named 'textBox1'
+    textBox1 = safe_cast<::Windows::UI::Xaml::Controls::TextBox^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"textBox1"));
     // Get the TextBlock named 'pageTitle'
     pageTitle = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"pageTitle"));
+    // Get the TextBlock named 'tagLine'
+    tagLine = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"tagLine"));
     // Get the VisualStateGroup named 'ApplicationViewStates'
     ApplicationViewStates = safe_cast<::Windows::UI::Xaml::VisualStateGroup^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"ApplicationViewStates"));
     // Get the VisualState named 'FullScreenLandscape'
@@ -45,6 +51,10 @@ void ::KR0Z_W8_App::GamePage::Connect(int connectionId, Platform::Object^ target
     case 1:
         (safe_cast<::Windows::UI::Xaml::Controls::Primitives::ButtonBase^>(target))->Click +=
             ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::KR0Z_W8_App::GamePage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&GamePage::GoBack);
+        break;
+    case 2:
+        (safe_cast<::Windows::UI::Xaml::UIElement^>(target))->KeyDown +=
+            ref new ::Windows::UI::Xaml::Input::KeyEventHandler(this, (void (::KR0Z_W8_App::GamePage::*)(Platform::Object^, Windows::UI::Xaml::Input::KeyRoutedEventArgs^))&GamePage::KeyDownHandle);
         break;
     }
     (void)connectionId; // Unused parameter

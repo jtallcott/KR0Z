@@ -22,6 +22,9 @@
     <Image Include="Assets\SplashScreen.png">
       <Filter>Assets</Filter>
     </Image>
+    <Filter Include="Pages">
+      <UniqueIdentifier>{af6bbc05-1fce-47ef-b12f-dcd1302420e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
@@ -48,6 +51,9 @@
       <Filter>Common</Filter>
     </ClCompile>
     <ClCompile Include="BasicPage.xaml.cpp" />
+    <ClCompile Include="CharacterSelectPage.xaml.cpp" />
+    <ClCompile Include="GamePage.xaml.cpp" />
+    <ClCompile Include="OptionsPage.xaml.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -71,6 +77,9 @@
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="BasicPage.xaml.h" />
+    <ClInclude Include="CharacterSelectPage.xaml.h" />
+    <ClInclude Include="GamePage.xaml.h" />
+    <ClInclude Include="OptionsPage.xaml.h" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
@@ -79,13 +88,25 @@
     <None Include="KR0Z W8 App_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="BasicPage.xaml" />
-    <Page Include="GamePage.xaml" />
-    <Page Include="CharacterSelectPage.xaml" />
+    <Page Include="BasicPage.xaml">
+      <Filter>Pages</Filter>
+    </Page>
+    <Page Include="GamePage.xaml">
+      <Filter>Pages</Filter>
+    </Page>
+    <Page Include="OptionsPage.xaml">
+      <Filter>Pages</Filter>
+    </Page>
+    <Page Include="CharacterSelectPage.xaml">
+      <Filter>Pages</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Common\ReadMe.txt">
       <Filter>Common</Filter>
+    </Text>
+    <Text Include="Assets\CharacterData.txt">
+      <Filter>Assets</Filter>
     </Text>
   </ItemGroup>
 </Project>

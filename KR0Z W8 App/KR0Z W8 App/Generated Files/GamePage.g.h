@@ -14,6 +14,7 @@ namespace Windows {
             namespace Controls {
                 ref class Button;
                 ref class TextBlock;
+                ref class TextBox;
             }
         }
     }
@@ -40,7 +41,10 @@ namespace KR0Z_W8_App
         bool _contentLoaded;
     
         private: ::Windows::UI::Xaml::Controls::Button^ backButton;
+        private: ::Windows::UI::Xaml::Controls::TextBlock^ textBlock1;
+        private: ::Windows::UI::Xaml::Controls::TextBox^ textBox1;
         private: ::Windows::UI::Xaml::Controls::TextBlock^ pageTitle;
+        private: ::Windows::UI::Xaml::Controls::TextBlock^ tagLine;
         private: ::Windows::UI::Xaml::VisualStateGroup^ ApplicationViewStates;
         private: ::Windows::UI::Xaml::VisualState^ FullScreenLandscape;
         private: ::Windows::UI::Xaml::VisualState^ Filled;

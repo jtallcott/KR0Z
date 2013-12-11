@@ -11,7 +11,8 @@
 namespace KR0Z_W8_App
 {
 	/// <summary>
-	/// A basic page that provides characteristics common to most applications.
+	/// A page that displays a collection of item previews.  In the Split Application this page
+	/// is used to display and select one of the available groups.
 	/// </summary>
 	public ref class CharacterSelectPage sealed
 	{
@@ -21,6 +22,5 @@ namespace KR0Z_W8_App
 	protected:
 		virtual void LoadState(Platform::Object^ navigationParameter,
 			Windows::Foundation::Collections::IMap<Platform::String^, Platform::Object^>^ pageState) override;
-		virtual void SaveState(Windows::Foundation::Collections::IMap<Platform::String^, Platform::Object^>^ pageState) override;
 	};
 }

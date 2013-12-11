@@ -9,8 +9,11 @@
 using namespace KR0Z_W8_App;
 
 using namespace Platform;
+using namespace Platform::Collections;
 using namespace Windows::Foundation;
 using namespace Windows::Foundation::Collections;
+using namespace Windows::Graphics::Display;
+using namespace Windows::UI::ViewManagement;
 using namespace Windows::UI::Xaml;
 using namespace Windows::UI::Xaml::Controls;
 using namespace Windows::UI::Xaml::Controls::Primitives;
@@ -19,7 +22,7 @@ using namespace Windows::UI::Xaml::Input;
 using namespace Windows::UI::Xaml::Media;
 using namespace Windows::UI::Xaml::Navigation;
 
-// The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
+// The Items Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234233
 
 CharacterSelectPage::CharacterSelectPage()
 {
@@ -39,15 +42,6 @@ void CharacterSelectPage::LoadState(Object^ navigationParameter, IMap<String^, O
 {
 	(void) navigationParameter;	// Unused parameter
 	(void) pageState;	// Unused parameter
-}
 
-/// <summary>
-/// Preserves state associated with this page in case the application is suspended or the
-/// page is discarded from the navigation cache.  Values must conform to the serialization
-/// requirements of <see cref="SuspensionManager::SessionState"/>.
-/// </summary>
-/// <param name="pageState">An empty map to be populated with serializable state.</param>
-void CharacterSelectPage::SaveState(IMap<String^, Object^>^ pageState)
-{
-	(void) pageState;	// Unused parameter
+	// TODO: Set a bindable collection of items using DefaultViewModel->("Items", <value>)
 }

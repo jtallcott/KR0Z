@@ -13,30 +13,44 @@
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">The Adventure Begins</x:String>
+        <x:String x:Key="AppName">KR0Z</x:String>
+        <x:String x:Key="TagLine">The Adventure Begins</x:String>
     </Page.Resources>
 
-    <!--
-        This grid acts as a root panel for the page that defines two rows:
-        * Row 0 contains the back button and page title
-        * Row 1 contains the rest of the page layout
-    -->
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="140"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <!-- Back button and page title -->
-        <Grid>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="pageTitle" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="100" Text="{StaticResource AppName}"/>
+            <TextBlock x:Name="tagLine" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Text="{StaticResource TagLine}"/>
+        </Grid>
+        <Grid Grid.Row ="1">
+            <StackPanel VerticalAlignment="Bottom">
+                <TextBlock Name="textBlock1" Height="Auto" Margin="100,0,100,20" FontSize="24"/>
+                <TextBox x:ConnectionId='2' Name="textBox1" Height="100" Margin="100,0,100,0" FontSize="24"                        />
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='1' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
+            <Button x:ConnectionId='1' x:Name="backButton" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" 
+                               IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
         </Grid>
-        <TextBox Text="What do?" CharacterSpacing="500" Margin="94,475,100,112" Grid.Row="1"/>
+        
+
         <VisualStateManager.VisualStateGroups>
 
             <!-- Visual states reflect the application's view state -->

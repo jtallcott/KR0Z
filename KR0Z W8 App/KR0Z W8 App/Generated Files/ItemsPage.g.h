@@ -40,7 +40,7 @@ namespace Windows {
 
 namespace KR0Z_W8_App
 {
-    partial ref class CharacterSelectPage : public ::KR0Z_W8_App::Common::LayoutAwarePage, 
+    partial ref class ItemsPage : public ::KR0Z_W8_App::Common::LayoutAwarePage, 
         public ::Windows::UI::Xaml::Markup::IComponentConnector
     {
     public:
